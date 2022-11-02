@@ -1,0 +1,29 @@
+{
+  "name": "imprenta",
+  "version": "1.0.0",
+  "description": "proyecto-ciclo4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node back/server",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon back/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon back/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jab1981/Imprenta.git"
+  },
+  "author": "team-scrum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jab1981/Imprenta/issues"
+  },
+  "homepage": "https://github.com/Jab1981/Imprenta#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "moongose": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
