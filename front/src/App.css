@@ -1,0 +1,22 @@
+html,
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(120, 182, 236);
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background:linear-gradient(90deg, rgb(3, 12, 54) 30%, rgb(21, 50, 116) 300%);
+}
+.navbar{
+  background-color: rgb(6, 3, 44);
+}
+
+
+footer{
+  margin-top: 8rem;
+  color: grey;
+  bottom: 0;
+  width: 100%;
+}

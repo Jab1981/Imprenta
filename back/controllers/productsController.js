@@ -82,7 +82,7 @@ function verProductos(){
     .then(res=>console.log(res))
     .catch(err=>console.error(err))
 }
-//verProductos(); llamamos al metodp para probar consulta por consola de los productos de la db
+//verProductos(); llamamos al metodo para probar consulta por consola de los productos de la db.
 
 function verProductoPorId(id){
     fetch('http://localhost:4000/api/producto/'+id)
