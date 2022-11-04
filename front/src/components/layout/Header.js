@@ -13,7 +13,7 @@ const Header = () => {
     </button>
     <form class="container-fluid justify-content-start">
     <button class="btn btn-sm btn-outline-success me-2" type="button">Inicio sesion</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button"><span className='ml-1' id='cart_count'>2 </span><i class="fa fa-truck"></i> Carrito </button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Carrito <i class="fa fa-truck"></i><span className='ml-1' id='cart_count'> 2</span></button>
   </form>
    
     </div>
