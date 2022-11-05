@@ -3,6 +3,8 @@ import React from 'react';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 import Home from './components/Home';
+import ProductsDetails from './components/products/ProductDetails';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -15,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Home" element={<Home/>}/>
+          <Route path="/producto/:id" element={<ProductsDetails/>}/>
         </Routes>
       </div>
       <Footer/>
