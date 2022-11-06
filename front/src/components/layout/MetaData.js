@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 import {Helmet} from 'react-helmet'
 
 const MetaData = ({title}) => {
     return(
         <Helmet>
-            <title>{`${title}- Preprensa SAS`}</title>
+            <title>{`${title} - Preprensa SAS`}</title>
         </Helmet>
     )
 }
