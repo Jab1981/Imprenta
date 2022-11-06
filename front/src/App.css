@@ -7,14 +7,14 @@ body{
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background:linear-gradient(90deg, rgb(2, 29, 59) 30%, rgb(87, 148, 189) 300%);
+  background:linear-gradient(90deg, rgb(3, 25, 51) 45%, rgb(187, 217, 236) 200%);
 }
 .navbar{
-  background-color: rgb(30, 48, 80);
+  background-color: rgb(14, 31, 70);
 }
 #encabezado_productos {
   margin-top: 1.8rem;
-  color: rgb(78, 163, 236);
+  color: rgb(169, 209, 245);
 }
 
 .card {
@@ -102,7 +102,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #0c6dbd;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -228,7 +228,7 @@ footer {
 
 .form-control:disabled,
 .form-control[readonly] {
-  background-color: white;
+  background-color: rgb(20, 225, 240);
 }
 
 /* Login & Register */
