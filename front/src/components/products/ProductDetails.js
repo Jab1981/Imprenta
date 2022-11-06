@@ -60,7 +60,7 @@ const ProductDetails = () => {
               </div>
               <button className="btn btn-sm btn-outline-secondary m-4" type="button" id='carrito_btn' >Agregar <i class="fa fa-truck"></i><span className='ml-1' disabled={product.inventario===0}></span></button>
               <hr/>
-              <p>Stock: <span id='stock_estado' className={product.inventario>0? 'greenColor':'redColor'}>{product.inventario>0? 'En existencia':'Agotado'}</span></p>
+              <p>Stock: <span id='stock_estado' className={product.inventario>0? 'greenColor':'redColor'}>{product.inventario>0? 'Disponible':'No Disponible'}</span></p>
               <hr/>
               <h4 className='mt-1'>Descripción</h4>
               <p>{product.descripcion}</p>
