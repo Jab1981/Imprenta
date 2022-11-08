@@ -5,7 +5,7 @@ const productosSchema=mongoose.Schema({
         type:String,
         required:[true,"Por favor registra el nombre del producto."],
         trim:true,
-        maxLength: [120,"El nombre no puede exceder los 120 caracteres."]
+        maxLength: [240,"El nombre no puede exceder los 120 caracteres."]
     },
     precio:{
         type:Number,

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import MetaData from "../layout/MetaData"
 import { useParams } from 'react-router-dom'
-import { getProductDetails, clearErrors} from '../../actions/productActions'
+import {getProductDetails, clearErrors} from '../../actions/productActions'
 import { useAlert} from 'react-alert'
 import {Carousel} from 'react-bootstrap'
 
@@ -43,7 +43,7 @@ const ProductDetails = () => {
 
   return (
     <Fragment>
-      {loading ? <i class="fa fa-spinner fa-spin">...</i>:(
+      {loading ? <i class="fa fa-spinner fa-spin"></i>:(
           
 <Fragment>
         <MetaData title={product.nombre}></MetaData>
