@@ -22,7 +22,7 @@ useEffect(()=>{
 
   return (
     <Fragment>
-      {loading ? <i class="fa fa-spinner fa-spin">...</i>:(
+      {loading ? <i class="fa fa-spinner fa-spin"></i>:(
       <Fragment>
          <MetaData title ="Litografia Pulgarin"></MetaData>
           <h1 id='encabezado_productos'>Nuestros Productos</h1>
