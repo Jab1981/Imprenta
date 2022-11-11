@@ -1,17 +1,21 @@
 html,
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(173, 206, 235);
+  color: rgb(157, 202, 241);
   width: auto;
   height: auto;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background:linear-gradient(90deg, rgb(3, 25, 51) 45%, rgb(187, 217, 236) 200%);
+  background:linear-gradient(90deg, rgb(4, 22, 44) 25%, rgb(131, 184, 216) 250%);
 }
 .navbar{
-  background-color: rgb(14, 31, 70);
+  background-color: rgb(10, 47, 82);
 }
+.navbar-brand{
+ color: rgb(227, 229, 235);
+}
+
 #encabezado_productos {
   margin-top: 1.8rem;
   color: rgb(169, 209, 245);
@@ -22,7 +26,7 @@ body{
 }
 
 .card-title a {
-  color: #2e2e2e;
+  color: #464646;
 }
 
 .card-title a:hover {
@@ -438,7 +442,7 @@ footer {
 #sidebar {
   min-width: 100%;
   max-width: 100%;
-  background: #232f3e;
+  background: #0a223f;
   color: #fff;
   transition: all 0.3s;
 }
@@ -448,7 +452,7 @@ footer {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #232f3e;
+  background: #3f6ea7;
 }
 #sidebar ul.components {
   padding: 5px 0px;
@@ -463,7 +467,7 @@ footer {
   text-decoration: none;
 }
 #sidebar ul li a:hover {
-  color: #232f3e;
+  color: #b9cce2;
   background: #fff;
 }
 
@@ -474,7 +478,7 @@ footer {
 #sidebar ul li.active > a,
 a[aria-expanded='true'] {
   color: #fff;
-  background: #232f3e;
+  background: #173150;
 }
 a[data-toggle='collapse'] {
   position: relative;
@@ -491,6 +495,7 @@ ul ul a {
   font-size: 1rem !important;
   padding-left: 30px !important;
   background: #232f3e;
+ 
 }
 
 ul.CTAs {
@@ -555,3 +560,9 @@ ul.CTAs a {
   color: grey;
 }
 
+.border {
+  display: inline-block;
+  width: 140px;
+  height: 80px;
+  margin: 15px;
+  }
