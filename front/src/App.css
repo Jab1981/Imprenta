@@ -7,7 +7,7 @@ body{
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background:linear-gradient(90deg, rgb(4, 22, 44) 25%, rgb(131, 184, 216) 250%);
+  background:linear-gradient(90deg, rgb(32, 74, 114) 35%, rgb(93, 147, 180) 200%);
 }
 .navbar{
   background-color: rgb(10, 47, 82);
@@ -318,7 +318,7 @@ footer {
   letter-spacing: 1px;
   line-height: 30px;
   padding: 5px 10px 5px 15px;
-  color: grey;
+  color: rgb(128, 128, 128);
   text-decoration: none;
   cursor: default;
   font-weight: bold;

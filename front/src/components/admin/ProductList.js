@@ -48,7 +48,7 @@ export const ProductList = () => {
             productos.forEach(producto => {
                 data.rows.push({
                     nombre:producto.nombre,
-                    precio:`${producto.precio}`,
+                    precio:`$${producto.precio}`,
                     inventario:producto.inventario,
                     vendedor:producto.vendedor,
                 })
