@@ -33,8 +33,9 @@ exports.getProductById= catchAsyncErrors(async(req,res,next)=> {
 
 //crear nuevo producto/api/productos
 exports.newProduct= catchAsyncErrors( async(req,res,next) => {
-  const product=await producto.create(req.body);
-  res.status(201).json({
+    req.body.user = req.user.id;
+    const product=await producto.create(req.body);
+    res.status(201).json({
     success:true,
     product
   })
@@ -42,6 +43,7 @@ exports.newProduct= catchAsyncErrors( async(req,res,next) => {
 
 //Update un producto
 exports.updateProduct= catchAsyncErrors( async(req,res,next)=> {
+    req.body.user = req.user.id;
     let product=await producto.findById(req.params.id)
     if (!product){
         return next(new ErrorHandler("Producto no encontrado",404))
@@ -59,6 +61,7 @@ exports.updateProduct= catchAsyncErrors( async(req,res,next)=> {
 
 //eliminar un producto
 exports.deleteProduct= catchAsyncErrors( async(req,res,next)=> {
+    req.body.user = req.user.id;
     const product=await producto.findById(req.params.id)
     if (!product){
         return next(new ErrorHandler("Producto no encontrado",404))
@@ -69,6 +72,87 @@ exports.deleteProduct= catchAsyncErrors( async(req,res,next)=> {
         message:"Producto eliminado correctamente!.",
      })
 })
+
+//Creacion de una review
+exports.createProductReview = catchAsyncErrors(async(req, res, next)=>{
+    const {rating, comentario, idProducto} = req.body;
+    const opinion = {
+        nombreCliente: req.user.nombre,
+        rating: Number(rating),
+        comentario
+    }
+    const product = await producto.findById(idProducto);
+
+    const isReviewed = product.opiniones.find(item =>
+        item.nombreCliente === req.user.nombre)
+
+        if(isReviewed){
+            product.opiniones.forEach(opinion => {
+                if(opinion.nombreCliente === req.user.nombre){
+                    opinion.comentario = comentario,
+                    opinion.rating = rating
+                }
+            })
+        }
+        else{
+            product.opiniones.push(opinion)
+            product.numCalificaciones = product.opiniones.length
+        }
+        product.calificacion = product.opiniones.reduce((acc, opinion)=>
+        opinion.rating + acc,0)/product.opiniones.length
+
+        await product.save({validateBeforeSave:false});
+
+        res.status(200).json({
+            success:true,
+            message:"Hemos opinado correctamente"
+        })
+})
+
+// ver todas las review de un producto
+exports.getProductReviews = catchAsyncErrors(async(req, res, next) =>{
+    const product = await producto.findById(req.query.id)
+
+    res.status(200).json({
+        success:true,
+        opiniones:product.opiniones
+    })
+})
+
+//eliminar review
+exports.deleteReview = catchAsyncErrors(async(req, res, next) =>{
+    const product = await producto.findById(req.query.idProducto);
+
+    const opiniones = product.opiniones.filter(opinion=>
+        opinion._id.toString() !== req.query.idReview.toString());
+
+        const numCalificaciones = opiniones.length;
+
+        const calificacion = product.opiniones.reduce((acc, Opinion) =>
+        Opinion.rating+acc,0)/opiniones.length;
+
+        await producto.findByIdAndUpdate(req.query.idProducto,{
+            opiniones,
+            calificacion,
+            numCalificaciones
+        },
+        {
+            new: true,
+            runValidators:true,
+            useFindAndModify:false
+        })
+        res.status(200).json({
+            success:true,
+            message:"Review eliminada correctamente."
+        })
+   
+})
+
+
+
+
+
+
 
 //fetch metodo para consultas en consola
 
