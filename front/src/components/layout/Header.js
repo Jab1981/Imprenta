@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom'
+import Search from './Search'
 const Header = () => {
   return (
     <Fragment>
@@ -25,11 +26,8 @@ const Header = () => {
     <Link className="dropdown-item" to='/'>Cerrar Sesión</Link>
   </div>
 </div>
-
-  <form className='d-flex'>
-      <input className='form-control me-2' type="search" placeholder="Encuentre su producto" aria-label="Search"></input>
-      <button class="btn btn-outline-success me-2" type="submit">Buscar</button>
-    </form>
+{/*Barra de Busqueda */}
+ <Search/> 
 </div>
 </div>
 </nav>

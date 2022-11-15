@@ -1,13 +1,13 @@
 html,
 body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(157, 202, 241);
+  color: rgb(181, 212, 240);
   width: auto;
   height: auto;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background:linear-gradient(90deg, rgb(32, 74, 114) 35%, rgb(93, 147, 180) 200%);
+  background:linear-gradient(90deg, rgb(13, 45, 87) 35%, rgb(88, 167, 204) 200%);
 }
 .navbar{
   background-color: rgb(10, 47, 82);
@@ -566,3 +566,4 @@ ul.CTAs a {
   height: 80px;
   margin: 15px;
   }
+ 

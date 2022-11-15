@@ -35,3 +35,4 @@ export const Dashboard = () => {
     </Fragment>
   )
 }
+export default Dashboard

@@ -7,7 +7,7 @@ import Sidebar from './Sidebar'
 import {MDBDataTable} from 'mdbreact'
 
 export const ProductList = () => {
-        const {loading,productos,error} =useSelector(state=>state.products)
+        const {loading,products,error} =useSelector(state=>state.products)
         const alert=useAlert();
         
         const dispatch = useDispatch();
@@ -45,12 +45,12 @@ export const ProductList = () => {
                 ],
                 rows:[]
             }
-            productos.forEach(producto => {
+            products.forEach(product => {
                 data.rows.push({
-                    nombre:producto.nombre,
-                    precio:`$${producto.precio}`,
-                    inventario:producto.inventario,
-                    vendedor:producto.vendedor,
+                    nombre:product.nombre,
+                    precio:`$${product.precio}`,
+                    inventario:product.inventario,
+                    vendedor:product.vendedor,
                 })
             })
             return data;
@@ -72,6 +72,7 @@ export const ProductList = () => {
                     bordered
                     striped
                     hover
+                                        
                 </MDBDataTable>
                 )}
             </Fragment>
